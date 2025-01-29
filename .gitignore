@@ -1,20 +1,37 @@
 # Dependencies
 /node_modules
 
-# Production
+# Build output
 /build
 
-# Generated files
+# Docusaurus generated files
 .docusaurus
 .cache-loader
 
-# Misc
+# Miscellaneous
 .DS_Store
+
+# Environment files
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
+# Log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Optional lock file ignores (if using yarn instead of npm)
+package-lock.json
+.yarn/*
+.pnp.*
+
+# Cloudflare-specific (optional, if needed)
+.cloudflare
+
+# IDE/editor files (optional)
+.idea/
+.vscode/
+*.swp
