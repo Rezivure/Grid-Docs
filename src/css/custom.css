@@ -6,25 +6,231 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #00DBA4;
+  --ifm-color-primary-dark: #00c493;
+  --ifm-color-primary-darker: #00b888;
+  --ifm-color-primary-darkest: #009971;
+  --ifm-color-primary-light: #1ae3b1;
+  --ifm-color-primary-lighter: #26e6b6;
+  --ifm-color-primary-lightest: #4decc6;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  /* Custom Grid brand colors */
+  --grid-teal: #00DBA4;
+  --grid-dark-teal: #005742;
+  --grid-cyan: #2AB4D9;
+  --grid-background: #FFFFFF;
+  --grid-text: #1D2025;
+  
+  /* Modern grayscale backgrounds */
+  --ifm-background-color: #FFFFFF;
+  --ifm-background-surface-color: #FAFAFA;
+  
+  /* Typography */
+  --ifm-font-family-base: 'Inter Variable', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --ifm-heading-font-family: var(--ifm-font-family-base);
+  
+  /* Spacing and borders */
+  --ifm-global-radius: 12px;
+  --ifm-button-border-radius: 8px;
+  
+  /* Navbar */
+  --ifm-navbar-background-color: #FFFFFF;
+  --ifm-navbar-link-color: #1D2025;
+  --ifm-navbar-link-hover-color: #00DBA4;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #00DBA4;
+  --ifm-color-primary-dark: #00c493;
+  --ifm-color-primary-darker: #00b888;
+  --ifm-color-primary-darkest: #009971;
+  --ifm-color-primary-light: #1ae3b1;
+  --ifm-color-primary-lighter: #26e6b6;
+  --ifm-color-primary-lightest: #4decc6;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
+  /* Dark mode overrides */
+  --ifm-background-color: #0E1012;
+  --ifm-background-surface-color: #171A1D;
+  --ifm-navbar-background-color: #0E1012;
+  --ifm-navbar-link-color: #FFFFFF;
+  --ifm-navbar-link-hover-color: #00DBA4;
+  --ifm-font-color-base: #FFFFFF;
+  --ifm-footer-background-color: #0E1012;
+  
+  /* Update dark mode specific brand colors */
+  --grid-background: #0E1012;
+  --grid-text: #FFFFFF;
+}
+
+/* Custom styles to match mygrid.app */
+
+/* Gradient background effect */
+.main-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Navigation bar styling */
+.navbar {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  padding: 0.5rem 0;
+}
+
+.navbar__brand {
+  font-weight: 600;
+}
+
+.navbar__link {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+/* Hero section on homepage */
+.hero {
+  background: var(--ifm-background-color);
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+/* Buttons */
+.button {
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.button--primary {
+  background-color: var(--grid-teal);
+  border-color: var(--grid-teal);
+}
+
+.button--primary:hover {
+  background-color: var(--grid-dark-teal);
+  border-color: var(--grid-dark-teal);
+}
+
+/* Cards and surfaces */
+.card {
+  border-radius: var(--ifm-global-radius);
+  border: 1px solid var(--ifm-toc-border-color);
+  box-shadow: none;
+  transition: border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--ifm-background-surface-color);
+}
+
+.footer--dark {
+  background-color: var(--grid-background);
+}
+
+/* Code blocks */
+pre {
+  border-radius: 8px;
+}
+
+/* Links */
+a {
+  color: var(--grid-teal);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--grid-dark-teal);
+  text-decoration: underline;
+}
+
+/* Sidebar */
+.menu__link--active {
+  color: var(--grid-teal);
+}
+
+/* Search bar */
+.navbar__search-input {
+  border-radius: 8px;
+}
+
+/* Tables */
+table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Admonitions */
+.admonition {
+  border-radius: 8px;
+}
+
+/* Pagination */
+.pagination-nav__link {
+  border-radius: 8px;
+}
+
+/* Homepage features section */
+.features {
+  background: var(--ifm-background-surface-color);
+}
+
+/* Additional refinements to match mygrid.app */
+
+/* Typography adjustments */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+/* Hero title */
+.hero__title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+[data-theme='light'] .hero__subtitle {
+  color: #6B7280;
+}
+
+[data-theme='dark'] .hero__subtitle {
+  color: #9CA3AF;
+}
+
+/* Docusaurus overrides for better integration */
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--ifm-toc-border-color);
+}
+
+[data-theme='dark'] .theme-doc-sidebar-container {
+  border-right-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile menu */
+.navbar__toggle {
+  color: var(--ifm-navbar-link-color);
+}
+
+/* Search box styling */
+[data-theme='dark'] .navbar__search-input {
+  background-color: var(--grid-background);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .navbar__search-input:focus {
+  border-color: var(--grid-teal);
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
